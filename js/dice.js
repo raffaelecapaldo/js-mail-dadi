@@ -13,7 +13,10 @@ buttonDice.addEventListener("click", function () {
     console.log("User" + userNumber);
     console.log("PC" + pcNumber);
 
-    if (userNumber > pcNumber) {
+    if (userNumber == pcNumber) {
+        console.log("Parità")
+    }
+    else if (userNumber > pcNumber) {
         console.log("L'utente ha vinto")
     }
 
