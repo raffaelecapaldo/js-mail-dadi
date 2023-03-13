@@ -22,11 +22,15 @@ buttonMail.addEventListener("click", function() {
     }}
    
     if (mailFinded) {
-        console.log ("Mail trovata")
+        console.log ("Mail trovata");
+    }
+
+    else if (!userMail.includes("@" || userMail.includes("."))) {
+        console.log("Mail non valida");
     }
 
     else {
-        console.log("Mail non trovata")
+        console.log("Mail non presente");
     }
 
 })
