@@ -13,26 +13,26 @@ buttonMail.addEventListener("click", function () {
     let userMail = document.getElementById("user-mail").value;
     let mailFinded;
     for (i = 0; i <= mailList.length; i++) { //esegui il ciclo, se in una delle iterazioni userMail combacia con l'indice, inserisci qualcosa in mailFinded
-        if (userMail == mailList[i]) {
+        if (userMail.toLowerCase() == mailList[i]) {
             mailFinded = "finded";
         }
     }
 
     if (mailFinded) { //Se c'è qualcosa in mailFinded, la mail è stata trovata
         console.log("Mail trovata");
-        boxAlert.innerHTML = `<p class="green text-center">Sei nella VIP list</p>`
-        
+        boxAlert.innerHTML = `<p class="green text-center text-uppercase fw-bold">Sei nella VIP list</p>`
+
     }
 
     else if (!userMail.includes("@" || userMail.includes("."))) { //Se non è stato trovato nulla, controlla che rispetti il formato di un indirizzo email
         console.log("Mail non valida");
-        boxAlert.innerHTML = `<p class="red text-center">Mail non valida</p>`
+        boxAlert.innerHTML = `<p class="red text-center text-uppercase fw-bold">Mail non valida</p>`
 
     }
 
     else {
         console.log("Mail non presente"); //Se rispetta il formato, allora la mail non è stata trovata
-        boxAlert.innerHTML = `<p class="red text-center">Non sei nella VIP list</p>`
+        boxAlert.innerHTML = `<p class="red text-center text-uppercase fw-bold">Non sei nella VIP list</p>`
 
     }
 
