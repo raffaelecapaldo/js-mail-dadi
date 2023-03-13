@@ -6,6 +6,16 @@
     color:red;
 }
 
+.orange {
+    color:orange;
+}
+
 #alert {
     font-size:2rem;
+}
+
+.result {
+    padding-left:5px;
+    font-size:1.5rem;
+    font-weight: bold;
 }
