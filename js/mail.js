@@ -24,7 +24,7 @@ buttonMail.addEventListener("click", function () {
 
     }
 
-    else if (!userMail.includes("@") && userMail.includes("."))  { //Se non è stato trovato nulla, controlla che rispetti il formato di un indirizzo email
+    else if (!userMail.includes(".") || !userMail.includes("@"))  { //Se non è stato trovato nulla, controlla che rispetti il formato di un indirizzo email
         console.log("Mail non valida");
         boxAlert.innerHTML = `<p class="red text-center text-uppercase fw-bold">Mail non valida</p>`
 
